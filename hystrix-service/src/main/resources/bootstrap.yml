@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: hystrix-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+turbine:
+  cluster-name-expression: new String("default")
+  app-config: organization-service,department-service,employee-service
+  aggregator:
+    cluster-config: default
+
+#turbine:
+#  aggregator:
+#    cluster-config: SAMPLE-HYSTRIX-AGGREGATE
+#  app-config: SAMPLE-HYSTRIX-AGGREGATE
